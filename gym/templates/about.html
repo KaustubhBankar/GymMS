@@ -1,0 +1,44 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+
+{% block body %}
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Page</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+ </head>
+<body style="background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));">
+    
+<br><br><br>
+
+
+
+
+<div class="container" style="margin-top:60px">
+    <h2 class="text-center text-primary font-weight-bold">About Us</h2>
+    <br><br>
+    <div clss="row">
+        <div class="col-sm-6 text-center">
+            <img src="{% static 'images/gym_img2.jpg' %}" width="300" height="200" class="img-responsive">
+
+
+        </div>
+        <div class="col-sm-6 text-center mt-5">
+            Hello Friends<br>
+            This is Gym Management System developed by Kaustubh Bankar,Sumit Barkhade and Pradip Aldar using 
+            Python django,html,css,javascript and bootstrap.
+            
+
+        </div>
+    </div>
+    <footer class="text-center font-weight-bold mt-5">
+        <h2>Copyright &copy; All Rights Reserved</h2>
+    </footer>
+
+
+{% endblock  %}

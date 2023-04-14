@@ -1,0 +1,42 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+
+
+
+
+{% if equal error "yes" %}
+<script>
+    alert('Invalid Login Credentials , Try Again');
+</script>
+{% endifequal %}
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Page</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+ </head>
+<body style="background: -webkit-linear-gradient(left, #a445b2, #ccfa42);">
+<br><br><br>
+
+
+<div class="container" style="margin-top:60px">
+<h2 class="text-center text-primary font-weight-bold">Admin login</h2>
+<form method="post" action="{% url 'login' %}"> 
+    {% csrf_token %}
+    <lable><b>AdminName</b></lable>
+    <input type= "text" name="uname" class="form-control">
+    <lable><b>Password</b></lable>
+    <input type= "Password" name="pwd" class="form-control">
+    <br>
+    <input type=submit value="Login" class="form-control btn btn-primary">
+
+
+</form>
+</div>
+
+
+{% endblock  %}
