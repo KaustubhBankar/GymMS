@@ -1,0 +1,23 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Question</label>
+                    <input type="text" class="form-control" name="question">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Answer</label>
+                    <input type="text" class="form-control" name="answer">
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+
+
+    
+{% endblock %}

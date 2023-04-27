@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -58,3 +59,25 @@ class Contact(models.Model):
     isread = models.BooleanField(default=False,blank=True,null=True)
     def __str__(self):
         return self.name
+
+
+
+
+class Feedback(models.Model):
+
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    feeQues = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.feeQues
+    
+class AnsFeed(models.Model):
+
+    questFeed = models.ForeignKey(Feedback,on_delete=models.CASCADE)
+    answers = models.CharField(max_length=350)
+
+    def __str__(self):
+        return str(self.questFeed)
+
+    
+    

@@ -40,6 +40,7 @@ urlpatterns = [
     path('edit_plan/<int:pid>', Edit_Plan, name='edit_plan'),
     path('edit_equipment/<int:pid>', Edit_Equipment, name='edit_equipment'),
     path('edit_member/<int:pid>', Edit_Member, name='edit_Mmmber'),
+    path('addFeedback/',feedBack,name='addFeedback')
     
     
 

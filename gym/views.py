@@ -51,12 +51,14 @@ def Login(request):
                 login(request,user)
                 return render(request,'index.html')
             else:
-                error = "yes"
-        except:
-            error = "yes"
-    d = {'error':error}
+                messages.error(request,"Invalid login credentials")
+                return render(request,'login.html')
+        except Exception as e:
+            print(e)
+            
+    
 
-    return render(request,'login.html',d)
+    return render(request,'login.html')
 
 
 def Logout_admin(request):
@@ -246,7 +248,7 @@ def Delete_Member(request,pid):
     
     if not request.user.is_staff:
         return redirect('login')
-    Member = Member.objects.get(id=pid)
+    member = Member.objects.get(id=pid)
     member.delete()
 
     return redirect('view_member')
@@ -376,5 +378,10 @@ def Edit_Member(request,pid):
         except:
             error = "yes"
     return render(request,'edit_Member.html', locals())
+
+
+def addFeedback(request):
+
+    
 
 
